@@ -1,0 +1,159 @@
+Makedown语法的目标是： 成为一种是用于网络的书写语言。
+
+
+换行：在插入处，先按两个以上空格，然后回车
+
+
+标题：
+
+This is an H1
+========
+
+This is an H2.
+--------------
+
+任何数量的 = 和 - 都可以。
+
+# 这是h1
+## 这是h2
+###### 这是h6
+
+# 这是h1 #
+## 这是h2 ##
+### 这是h3 ######
+
+
+区块引用：区块引用可以嵌套，只要根据层次加上不同数量的 > 
+
+> This is the first level of quoting.
+>
+>> This is nested blockquote.
+>
+> Back to the first level.
+
+引用去区块内 也可以是其他的makedown语法，包括标题 列表 代码区等。
+
+> ## 这是一个标题。
+> 1.  这是第一行列表项。
+>  2. 这是第二行列表项。
+> 
+> 给出一些列子代码：
+> 
+> 	return shell_exec(''echo $input | $ markdown_script');
+
+
+列表
+
+无序列表使用星号 加好 或是 减号 作为列表标记
+
+* Red
+* Green
+* Blue
+
+等同于
++ Red
++ Green
++ Blue
+
+等同于
+- Red
+- Green
+- Blue
+
+有序列表则使用数字接一个英文句点。
+
+1. Bird
+2. McHale
+3. Parish
+
+在句点前加上反斜杠，避免列表不小心产生。
+
+1986\.  What a great season.
+
+
+代码区块
+Markdown会用<pre>和<code>标签来把代码区块包起来。
+要在Markdown中建立代码区块很简单，只要简单地缩进4个空格或1个制表符就可以。
+
+
+分割线
+你可以在一行中用3个以上的星号 减号 底线 来建立一个分割线，行内不能有其他东西。
+也可以在星号或是减号中间插入空格。。
+
+* * *
+*** 
+*****
+- - -
+________
+
+
+
+区段元素
+
+如建立一个行内式的链接，只要在方括号后面紧接着圆括号并插入链接即可，
+如果你还要加上链接的title文字，只要在网址后面，用双引号把 title 文字包起来即可。
+
+This is [an example](http://example.com/ "Title") inline link.
+
+[This link](http://example.net/) has no title attribute.
+
+如果链接到同样主机的资源，可以使用相对路径。
+
+
+强调
+使用 星号 和 底线 作为标记强调字词的符号。
+
+* single asterisks *  <em>
+_ single underscores _  <em> 
+** double asterisks **  <strong>
+__ double underscores __  <strong>
+
+但是如果你的 * 和 _ 两边都有空白的话，它们就只会被当成普通的符号。
+
+
+代码
+
+如果要标记一小段行内代码，你可以用反引号把它包起来。
+
+Use the `printf()` function.
+
+
+图片
+
+![Alt text](/path/to/img.jpg)
+
+![Alt text](/path/to/img.jpg "Optional title')
+
+详细叙述如下：
+
+一个惊叹号 !
+接着一个方括号，里面放上图片的替代文字
+接着一个普通括号，里面放上图片的网址，最后还可以用引号包住并加上 选择性的 'title' 文字。
+
+
+其他
+
+<http://example.com/>  超链接
+
+<address@example.com>  邮箱
+
+
+反斜杠
+利用反斜杠插入一些在语法中有其他意义的符号。
+
+\*literal asterisks\*
+
+Markdown 支持以下这些符号前面加上反斜杠来帮助插入普通的符号：
+
+\   反斜线
+`   反引号
+*   星号
+_   底线
+{}  花括号
+[]  方括号
+()  括弧
+#   井字号
++   加号
+-   减号
+.   英文句点
+!   惊叹号
